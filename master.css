@@ -1,0 +1,141 @@
+body {
+    Font-size: 16px;
+    font-family: 'karla', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Bright-Yellow);
+}
+
+:root {
+    /* primary  */
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    /* secondry  */
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: grid;
+    grid-template-areas:
+        "head head head head"
+        "head head head head"
+        "left left right right"
+        "left left right right";
+    max-width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section .box_head {
+    background-color: var(--Light-Gray);
+    grid-area: head;
+    border-radius: 10px 10px 0px 0px;
+}
+section .box_head > h2 {
+    color: var(--Cyan);
+    padding: 40px 0px 20px 40px;
+    font-family: "karla";
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+section .box_head .days {
+    padding: 0px 0px 10px 40px;
+    color: var(--Grayish-Blue);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+section .box_head .pr {
+    padding: 0px 0px 40px 40px;
+    color: var(--Grayish-Blue);
+    line-height: 1.6;
+    max-width: 85%;
+}
+
+section .box_left {
+    background-color: var(--Cyan);
+    grid-area: left;
+    min-width: 300px;
+    border-bottom-left-radius: 10px;
+    color: var(--Light-Gray);
+}
+
+section .box_right {
+    background-color: hsla(179, 62%, 43%, 0.679);
+    grid-area: right;
+    border-bottom-right-radius: 10px;
+    color: var(--Light-Gray);
+}
+section .box_left h3 {
+   padding: 40px 0px 15px 40px;
+   font-size: 1rem;
+}
+section .box_left strong {
+    padding: 0px 5px 15px 40px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.box_left span {
+    color: var(--Bright-Yellow);
+    font-size: 0.8rem;
+}
+.box_left p {
+    padding: 10px 0px 20px 40px;
+    font-size: 0.9rem;
+}
+.box_left button {
+    width: fit-content;
+    margin: 10px 0px 20px 40px;
+    width: 75%;
+    padding: 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--Bright-Yellow);
+    color: var(--Light-Gray);
+}
+.box_right h3 {
+    padding: 40px 0px 20px 40px;
+    font-size: 1rem;
+}
+.box_right p {
+    padding: 0px 0px 40px 40px;
+    max-width: 69%;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+@media (max-width: 767px) {
+    section {
+        grid-template-areas: 
+        "head head head head"
+        "head head head head"
+        "left left left left"
+        "left left left left"
+        "right right right right"
+        "right right right right";
+        max-width: 400px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .box_left {
+        border-bottom-left-radius: 0px;
+
+    }
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
